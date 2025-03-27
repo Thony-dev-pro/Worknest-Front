@@ -1,0 +1,204 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Conteneur principal */
+.cahier-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Menu latéral */
+.menu-cote {
+    width: 250px;
+    background-color: #4a4a4a;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-cahier {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-notes {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.menu-notes li {
+    padding: 12px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-notes li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-notes li span {
+    margin-left: 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+}
+
+.menu-notes li:hover {
+    background-color: #5e5e5e;
+}
+
+.menu-notes li.active {
+    background-color: #6e6e6e;
+    border-left: 4px solid #ff9f43;
+}
+
+.menu-notes li.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background-color: #ff9f43;
+}
+
+.outils-notes {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-notes {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9f43;
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-notes:hover {
+    background-color: #ff8c1a;
+}
+
+#recherche {
+    background-color: transparent;
+    border: 1px solid #ff9f43;
+}
+
+/* Contenu principal */
+.contenu-principal {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+    background-color: #f9f9f7;
+}
+
+.page-cahier {
+    background-color: white;
+    min-height: 90vh;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+/* Effet de papier ligné */
+.lignes-papier {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+        white,
+        white 29px,
+        #94acd4 30px
+    );
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+/* Effet de coins de page */
+.coins-papier {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.coins-papier::before,
+.coins-papier::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, transparent 0%, transparent 50%, #f9f9f7 50%, #f9f9f7 100%);
+}
+
+.coins-papier::before {
+    top: 0;
+    left: 0;
+}
+
+.coins-papier::after {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+/* Contenu de la note */
+.contenu-note {
+    position: relative;
+    z-index: 1;
+    min-height: 80vh;
+    padding: 10px 0;
+}
+
+.titre-note {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.contenu-note p {
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Style pour le contenu éditable */
+[contenteditable="true"]:focus {
+    outline: none;
+}
