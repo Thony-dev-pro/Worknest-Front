@@ -202,3 +202,54 @@ body {
 [contenteditable="true"]:focus {
     outline: none;
 }
+
+/* Ajoutez ces styles à votre fichier CSS */
+
+.menu-projets {
+    padding: 0 !important;
+    margin: 5px 0 !important;
+}
+
+.select-projets {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #5e5e5e;
+    color: white;
+    border: none;
+    border-radius: 0;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.select-projets:focus {
+    outline: none;
+    background-color: #6e6e6e;
+}
+
+.select-projets option {
+    background-color: #4a4a4a;
+    padding: 10px;
+}
+
+/* Flèche du select */
+.menu-projets {
+    position: relative;
+}
+
+.menu-projets::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.8rem;
+    pointer-events: none;
+    z-index: 1;
+}

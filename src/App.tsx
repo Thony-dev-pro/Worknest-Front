@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './assets/styles/css/style.css'
 import { NavBar } from './components/features/navbar/navbar'
 import { Teste } from './components/features/teste/Teste'

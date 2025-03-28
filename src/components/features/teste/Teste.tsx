@@ -1,5 +1,4 @@
-// src/components/Button.tsx
-import React, { ReactNode } from 'react';
+
 
 
 export const Teste = () => {
