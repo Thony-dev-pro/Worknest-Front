@@ -1,8 +1,6 @@
 import './assets/styles/css/style.css'
-import './assets/styles/css/tasks.css'
 import { NavBar } from './components/features/navbar/navbar'
 import { TasksList } from './components/features/task/TableTasks'
-import { Teste } from './components/features/teste/Teste'
 
 function App() {
   return (

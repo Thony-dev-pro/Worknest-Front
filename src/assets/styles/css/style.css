@@ -12,6 +12,12 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+/* Dans votre index.css ou reset.css */
+input, textarea, select {
+    color: inherit; /* Hérite de la couleur parente */
+    background-color: white;
+    border: 1px solid #ccc; /* Bordure visible */
+  }
 
 /* Conteneur principal */
 .cahier-container {

@@ -1,4 +1,5 @@
-
+import '../../../assets/styles/css/tasks.css'
+import { Filter } from '../../ui/Search';
 
 export const TasksList = () => {
 
@@ -8,7 +9,7 @@ export const TasksList = () => {
             <h1 className="notepad-title">Vanilla Pay International</h1>
             <div className="notepad-date" id="current-date"></div>
         </div>
-        
+        <Filter></Filter>
         <table>
             <thead>
                 <tr>
