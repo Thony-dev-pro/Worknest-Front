@@ -1,5 +1,7 @@
 import './assets/styles/css/style.css'
+import './assets/styles/css/tasks.css'
 import { NavBar } from './components/features/navbar/navbar'
+import { TasksList } from './components/features/task/TableTasks'
 import { Teste } from './components/features/teste/Teste'
 
 function App() {
@@ -11,7 +13,7 @@ function App() {
         <main className="contenu-principal">
                 <div className="lignes-papier"></div>
                 <div className="contenu-note">
-                    <Teste></Teste>
+                    <TasksList></TasksList>
                 </div>
                 <div className="coins-papier"></div>
         </main>
