@@ -1,4 +1,5 @@
 import '../../../assets/styles/css/tasks.css'
+import { Pagination } from '../../ui/Pagination';
 import { Filter } from '../../ui/Search';
 
 export const TasksList = () => {
@@ -228,6 +229,7 @@ export const TasksList = () => {
                 </tr>
             </tbody>
         </table>
+        <Pagination></Pagination>
     </div>
   );
 };
