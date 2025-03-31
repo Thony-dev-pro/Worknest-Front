@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import '../../../assets/styles/css/tasks.css'
 import { Pagination } from '../../ui/Pagination';
 import { Filter } from '../../ui/Search';
+import Modal from '../../ui/Modal';
+import { Detail } from './Detail';
 
 export const TasksList = () => {
+    const [isModalDetailOpen, setIsModalDetailOpen] = useState(true);
+    const titleDetail = "Détails de la tâche";
 
   return (
     <div className="notepad">
@@ -87,7 +92,7 @@ export const TasksList = () => {
                         <div className="actions-dropdown">
                             <button className="dropdown-btn">Actions</button>
                             <div className="dropdown-content">
-                                <button className="edit">Détail</button>
+                                <button className="edit" onClick={() => setIsModalDetailOpen(true)}>Détail</button>
                                 <button className="delete">⬆ MEP</button>
                                 <button className="archive">⬆ MEPP</button>
                                 <button className="archive">❌ Supprimer</button>
@@ -153,7 +158,7 @@ export const TasksList = () => {
                         <div className="actions-dropdown">
                             <button className="dropdown-btn">Actions</button>
                             <div className="dropdown-content">
-                                <button className="edit">Détail</button>
+                                <button className="edit" onClick={() => setIsModalDetailOpen(true)}>Détail</button>
                                 <button className="delete">⬆ MEP</button>
                                 <button className="archive">⬆ MEPP</button>
                                 <button className="archive">❌ Supprimer</button>
@@ -219,7 +224,7 @@ export const TasksList = () => {
                         <div className="actions-dropdown">
                             <button className="dropdown-btn">Actions</button>
                             <div className="dropdown-content">
-                                <button className="edit">Détail</button>
+                                <button className="edit" onClick={() => setIsModalDetailOpen(true)}>Détail</button>
                                 <button className="delete">⬆ MEP</button>
                                 <button className="archive">⬆ MEPP</button>
                                 <button className="archive">❌ Supprimer</button>
@@ -230,6 +235,9 @@ export const TasksList = () => {
             </tbody>
         </table>
         <Pagination></Pagination>
+        <Modal titre={titleDetail} isOpen={isModalDetailOpen} onClose={() => setIsModalDetailOpen(false)}>
+            <Detail></Detail>
+        </Modal>
     </div>
   );
 };
