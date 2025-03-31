@@ -56,4 +56,103 @@
     text-decoration: line-through;
     color: #888;
   }
+
+  /*date debut et fin*/
+  .date-fields {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.date-field {
+    flex: 1;
+}
+
+.date-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffcc00;
+    border-radius: 4px;
+    background-color: #fffdf6;
+    font-family: inherit;
+    color: #333;
+}
+
+.date-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.3);
+}
   
+
+/*duration*/
+.duration-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.duration-input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ffcc00;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #fffdf6;
+}
+
+.duration-unit {
+  padding: 5px;
+  border: 1px solid #ffcc00;
+  border-radius: 3px;
+  background-color: #fffdf6;
+  color: #333;
+}
+
+
+/*add Check list*/
+.add-item-btn {
+  background-color: #ffeb99;
+  color: #333;
+  border: 1px dashed #ffcc00;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.add-item-btn:hover {
+  background-color: #ffcc00;
+  border-style: solid;
+}
+
+.plus-icon {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/*delete*/
+.delete-item-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.delete-item-btn:hover {
+  color: #ff3333;
+  background-color: rgba(255, 0, 0, 0.1);
+}
